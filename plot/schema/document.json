@@ -1,0 +1,36 @@
+{
+    "schema": "document",
+    "inherit": "base",
+    "items": {
+        "filename": {
+            "default": "document.pdf"
+        },
+        "page_size": {
+            "default": "A4",
+            "validate": ["set-choices","A0","A1","A2","A3","A4","A5","A6","letter","legal"]
+        },
+        "orientation": {
+            "default": "portrait",
+            "validate": ["set-choices","portrait","landscape"]
+        },
+        "leftMargin": {
+            "required": false,
+            "type": "int"
+        },
+        "topMargin": {
+            "required": false,
+            "type": "int"
+        },
+        "rightMargin": {
+            "required": false,
+            "type": "int"
+        },
+        "bottomMargin": {
+            "required": false,
+            "type": "int"
+        },
+        "pages": {
+            "unique": false
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "schema": "base",
+    "items": {
+        "debug": {
+            "default": false,
+            "type": "bool"
+        }
+    }
+}

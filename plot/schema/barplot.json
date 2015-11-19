@@ -1,0 +1,8 @@
+{
+    "schema": "barplot",
+    "inherit": "base",
+    "items": {
+        "contents": {
+        }
+    }
+}
