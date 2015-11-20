@@ -1,4 +1,3 @@
-from directive import Directive
 
-class XAxis(Directive):
+class XAxis(dict):
     pass

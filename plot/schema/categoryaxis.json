@@ -1,0 +1,17 @@
+{
+    "schema": "categoryaxis",
+    "inherit": "axis",
+    "items": {
+        "categoryNames": {
+            "unique": false
+        },
+        "labels": {
+            "required": false,
+            "unique": false
+        },
+        "title": {
+            "required": false,
+            "type": "str"
+        }
+    }
+}

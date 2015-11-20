@@ -1,0 +1,30 @@
+{
+    "schema": "valueaxis",
+    "inherit": "axis",
+    "items": {
+        "valueMin": {
+            "required": false,
+            "type": "float"
+        },
+        "valueMax": {
+            "required": false,
+            "type": "float"
+        },
+        "valueStep": {
+            "required": false,
+            "type": "float"
+        },
+        "minimumTickSpacing": {
+            "required": false,
+            "type": "float"
+        },
+        "labelTextFormat": {
+            "required": false,
+            "type": "str"
+        },
+        "title": {
+            "required": false,
+            "type": "str"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "schema": "axis",
+    "inherit": "base",
+    "items": {
+        "visible": {
+            "type": "bool",
+            "default": true
+        },
+        "strokeColor": {
+            "required": false
+        },
+        "strokeDashArray": {
+            "required": false
+        },
+        "strokeWidth": {
+            "type": "int",
+            "required": false
+        },
+        "tickLeft": {
+            "type": "int",
+            "required": false
+        },
+        "tickRight": {
+            "type": "int",
+            "required": false
+        },
+        "tickUp": {
+            "type": "int",
+            "required": false
+        },
+        "tickDown": {
+            "type": "int",
+            "required": false
+        },
+    }
+}

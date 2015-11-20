@@ -1,0 +1,11 @@
+{
+    "schema": "category_axis",
+    "inherit": "base",
+    "items": {
+        "labels": {
+            "schema": "label" 
+        },
+        "category_names": {
+        }
+    }
+}

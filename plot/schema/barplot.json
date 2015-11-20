@@ -3,6 +3,16 @@
     "inherit": "base",
     "items": {
         "contents": {
+        },
+        "orientation": {
+            "default": "vertical",
+            "validate": ["set-choices","horizontal","vertical"]
+        },
+        "xaxis": {
+            "required:": false
+        },
+        "yaxis": {
+            "required": false
         }
     }
 }

@@ -9,22 +9,22 @@ class BarPlot(Renderable):
     
     def render(self,width,height):
         contents = []
-        g_width = width * 0.85
-        g_height = height * 0.90
-        p_width = g_width
-        p_height = g_height
-        drawing = Plot(g_width-20, g_height-10)
+        ten_percent_width = width * 0.1
+        ten_percent_height = height * 0.1
+        g_width = width - ten_percent_width
+        g_height = height - ten_percent_height
+        drawing = Plot(g_width, g_height)
         bar = VerticalBarChart()
-        bar.x = 20
-        bar.y = 0
-        bar.width = g_width - 20
-        bar.height = g_height - 10
+        bar.x = ten_percent_width
+        bar.y = ten_percent_height
+        bar.width = g_width - ten_percent_width
+        bar.height = g_height - ten_percent_height
         bar.data = [[1,4,8,5,7],[2,6,4,8,1],[4,2,7,4,4],[4,2,7,1,2]]
         bar.valueAxis.valueMin = 0
         bar.valueAxis.valueMax = 9
-        #barColors = ['#50626F','#FA7F36','#42A7CA','#1EBAA6']
-        #for i in range(len(bar.data)):
-        #    bar.bars[i].fillColor = barColors[i]
+        barColors = [0x50626F,0xFA7F36,0x42A7CA,0x1EBAA6]
+        for i in range(len(bar.data)):
+            bar.bars[i].fillColor = colors.HexColor(barColors[i])
         #bar.categoryAxis.style = 'stacked'
 
         bar.valueAxis.visibleGrid = True

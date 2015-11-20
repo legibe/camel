@@ -1,4 +1,3 @@
-from directive import Directive
 
-class YAxis(Directive):
+class YAxis(dict):
     pass
