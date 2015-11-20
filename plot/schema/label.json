@@ -1,0 +1,80 @@
+{
+    "schema": "label",
+    "inherit": "base",
+    "items": {
+        "dx": {
+            "required": false,
+            "type": "float",
+            "help": "The label's x displacement."
+        },
+        "dy": {
+            "required": false,
+            "type": "float",
+            "help": "The label's y displacement."
+        },
+        "angle": {
+            "required": false,
+            "type": "float",
+            "help": "The angle of rotation (counterclockwise) applied to the label."
+        },
+        "boxAnchor": {
+            "required": false,
+            "type": "str",
+            "validate": ["set-choices","n","e",w","s","ne","nw","se","sw"],
+            "help": "The label's box anchor, one of 'n', 'e', 'w', 's', 'ne', 'nw', 'se', 'sw'."
+        },
+        "textAnchor": {
+            "required": false,
+            "type": "str",
+            "validate": ["set-choices","start","middle",end"],
+            "help": "The place where to anchor the label's text, one of 'start', 'middle', 'end'."
+        },
+        "boxFillColor": {
+            "required": false,
+            "help": "The fill color used in the label's box."
+        },
+        "boxStorkeColor": {
+            "required": false,
+            "help": "The stroke color used in the label's box."
+        },
+        "boxStrokeWidth": {
+            "required": false,
+            "type": "float",
+            "help": "The line width of the label's box."
+        },
+        "fontName": {
+            "default": "Helvetica",
+            "help": "The label's font name."
+        },
+        "fontSize": {
+            "default": 8,
+            "type": "int",
+            "help": "The label's font size."
+        },
+        "leading": {
+            "required": false,
+            "type": "float",
+            "help": "The leading value of the label's text lines."
+        },
+        "x": {
+            "required": false,
+            "type": "float",
+            "help": "The X-coordinate of the reference point."
+        },
+        "y": {
+            "required": false,
+            "type": "float",
+            "help": "The Y-coordinate of the reference point."
+        },
+        "width": {
+            "required": false,
+            "type": "float",
+            "help": "The label's width."
+        },
+        "height": {
+            "required": false,
+            "type": "float",
+            "help": "The label's height."
+        }
+    }
+}

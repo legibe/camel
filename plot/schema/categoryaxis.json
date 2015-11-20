@@ -7,7 +7,7 @@
         },
         "labels": {
             "required": false,
-            "unique": false
+            "schema": "label"
         },
         "title": {
             "required": false,

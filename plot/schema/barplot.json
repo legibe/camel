@@ -9,7 +9,7 @@
             "validate": ["set-choices","horizontal","vertical"]
         },
         "xaxis": {
-            "required:": false
+            "required": false
         },
         "yaxis": {
             "required": false

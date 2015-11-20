@@ -1,5 +1,5 @@
 from reportlab.lib import colors
-from reportlab.graphics.charts.barcharts import VerticalBarChart
+from reportlab.graphics.charts.barcharts import HorizontalBarChart,VerticalBarChart
 from reportlab.graphics.charts.textlabels import Label
 from reportlab.graphics.charts.legends import Legend
 from renderable import Renderable
@@ -14,7 +14,8 @@ class BarPlot(Renderable):
         g_width = width - ten_percent_width
         g_height = height - ten_percent_height
         drawing = Plot(g_width, g_height)
-        bar = VerticalBarChart()
+        #bar = VerticalBarChart()
+        bar = HorizontalBarChart()
         bar.x = ten_percent_width
         bar.y = ten_percent_height
         bar.width = g_width - ten_percent_width
@@ -31,8 +32,10 @@ class BarPlot(Renderable):
         bar.valueAxis.labels.fontSize = 8
         bar.valueAxis.labels.fontName = 'Helvetica'
         bar.valueAxis.labelTextFormat = format
+        bar.categoryAxis.labels.dx = 556
+        print bar.categoryAxis.labels.dx
         bar.categoryAxis.labels.boxAnchor = 'ne'
-        bar.categoryAxis.labels.dx = 8
+        bar.categoryAxis.labels.dx = -8
         bar.categoryAxis.labels.dy = -2
         bar.categoryAxis.labels.angle = 15
         bar.categoryAxis.labels.fontSize = 8
