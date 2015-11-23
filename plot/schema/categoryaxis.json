@@ -5,10 +5,6 @@
         "categoryNames": {
             "unique": false
         },
-        "labels": {
-            "required": false,
-            "schema": "label"
-        },
         "title": {
             "required": false,
             "type": "str"

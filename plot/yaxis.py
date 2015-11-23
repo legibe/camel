@@ -1,3 +1,0 @@
-
-class YAxis(dict):
-    pass

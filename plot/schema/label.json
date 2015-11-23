@@ -20,13 +20,13 @@
         "boxAnchor": {
             "required": false,
             "type": "str",
-            "validate": ["set-choices","n","e",w","s","ne","nw","se","sw"],
+            "validate": ["set-choices","n","e","w","s","ne","nw","se","sw"],
             "help": "The label's box anchor, one of 'n', 'e', 'w', 's', 'ne', 'nw', 'se', 'sw'."
         },
         "textAnchor": {
             "required": false,
             "type": "str",
-            "validate": ["set-choices","start","middle",end"],
+            "validate": ["set-choices","start","middle","end"],
             "help": "The place where to anchor the label's text, one of 'start', 'middle', 'end'."
         },
         "boxFillColor": {

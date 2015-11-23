@@ -3,5 +3,6 @@ from document import Document
 from page import Page
 from text import Text
 from barplot import BarPlot
-from xaxis import XAxis
-from yaxis import YAxis
+from categoryaxis import CategoryAxis
+from valueaxis import ValueAxis
+from label import Label

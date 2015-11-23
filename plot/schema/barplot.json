@@ -8,10 +8,10 @@
             "default": "vertical",
             "validate": ["set-choices","horizontal","vertical"]
         },
-        "xaxis": {
+        "categoryAxis": {
             "required": false
         },
-        "yaxis": {
+        "valueAxis": {
             "required": false
         }
     }

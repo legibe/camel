@@ -8,34 +8,14 @@ d = Document(
             layout = [2,2],
             layout_tiles = [[1,1,2,3],[2,1,3,2],[2,2,3,3]],
             contents = [
-                BarPlot(contents=1),
-                BarPlot(contents=1),
-                BarPlot(contents=1),
-            ]),
-        Page(
-            layout = [2,2],
-            layout_tiles = [[1,1,2,2],[2,1,3,2],[1,2,3,3]],
-            contents = [
-                BarPlot(contents=1),
-                BarPlot(contents=1),
-                BarPlot(contents=1),
-            ]),
-        Page(
-            layout = [2,2],
-            layout_tiles = [[1,1,2,3],[2,1,3,2],[2,2,3,3]],
-            contents = [
-                BarPlot(contents=1),
-                BarPlot(contents=1),
-                BarPlot(contents=1),
-            ]),
-        Page(
-            layout = [2,2],
-            layout_tiles = [[1,1,2,2],[2,1,3,2],[1,2,3,3]],
-            contents = [
-                BarPlot(contents=1),
+                BarPlot(
+                    contents=1,
+                    categoryAxis = CategoryAxis()
+                ),
                 BarPlot(contents=1),
                 BarPlot(contents=1),
             ]),
         ]
 )
+print d
 d.render()

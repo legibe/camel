@@ -2,6 +2,10 @@
     "schema": "axis",
     "inherit": "base",
     "items": {
+        "labels": {
+            "required": false,
+            "schema": "label"
+        },
         "visible": {
             "type": "bool",
             "default": true
@@ -32,5 +36,9 @@
             "type": "int",
             "required": false
         },
+        "visibleGrid": {
+            "type": "bool",
+            "default": false
+        }
     }
 }
