@@ -18,7 +18,7 @@
             "help": "The angle of rotation (counterclockwise) applied to the label."
         },
         "boxAnchor": {
-            "required": false,
+            "default": "ne",
             "type": "str",
             "validate": ["set-choices","n","e","w","s","ne","nw","se","sw"],
             "help": "The label's box anchor, one of 'n', 'e', 'w', 's', 'ne', 'nw', 'se', 'sw'."

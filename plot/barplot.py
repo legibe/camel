@@ -1,6 +1,5 @@
 from reportlab.lib import colors
 from reportlab.graphics.charts.barcharts import HorizontalBarChart,VerticalBarChart
-from reportlab.graphics.charts.textlabels import Label
 from reportlab.graphics.charts.legends import Legend
 from renderable import Renderable
 from plot import Plot
@@ -39,29 +38,19 @@ class BarPlot(Renderable):
         barColors = [0x50626F,0xFA7F36,0x42A7CA,0x1EBAA6]
         for i in range(len(bar.data)):
             bar.bars[i].fillColor = colors.HexColor(barColors[i])
-        #bar.categoryAxis.style = 'stacked'
 
         vaxis = ValidValueAxis(self.get('valueAxis',{}))
         self.setAttributes(bar.valueAxis,vaxis)
         bar.valueAxis.valueMin = 0
         bar.valueAxis.valueMax = 9
-        self.setAttributes(bar.valueAxis.labels,ValidLabel(self.get('labels',{})))
+        self.setAttributes(bar.valueAxis.labels,ValidLabel(vaxis.get('labels',{})))
 
-        bar.categoryAxis.labels.dx = 0
-        bar.categoryAxis.labels.boxAnchor = 'ne'
-        if horizontal:
-            bar.categoryAxis.labels.dx = -8
-        else:
-            bar.categoryAxis.labels.dx = 8
-        bar.categoryAxis.labels.dy = -2
-        bar.categoryAxis.labels.angle = 15
-        bar.categoryAxis.labels.fontSize = 8
-        bar.categoryAxis.labels.fontName = 'Helvetica'
+        caxis = ValidCategoryAxis(self.get('categoryAxis',{}))
+        self.setAttributes(bar.categoryAxis,caxis)
         bar.categoryAxis.categoryNames = ['May','Jun','Jul','Aug','Sep']
-        bar.barLabels.nudge = 7
+        self.setAttributes(bar.categoryAxis.labels,ValidLabel(vaxis.get('labels',{})))
 
-        bar.barLabels.fontName = 'Helvetica'
-        bar.barLabels.fontSize = 6
+        #bar.categoryAxis.style = 'stacked'
 
         drawing.add(bar)
         contents.append(drawing)

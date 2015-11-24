@@ -10,7 +10,9 @@ d = Document(
             contents = [
                 BarPlot(
                     contents=1,
-                    categoryAxis = CategoryAxis()
+                    categoryAxis = CategoryAxis(
+                        labels = Label(angle = -15)
+                    )
                 ),
                 BarPlot(contents=1),
                 BarPlot(contents=1),
