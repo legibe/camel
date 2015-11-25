@@ -9,7 +9,7 @@ from label import ValidLabel
 
 class BarPlot(Renderable):
 
-    exclude = set(['debug'])
+    exclude = set(['debug','labels'])
 
     def setAttributes(self,target,obj):
         for k,i in obj.items():
@@ -43,12 +43,14 @@ class BarPlot(Renderable):
         self.setAttributes(bar.valueAxis,vaxis)
         bar.valueAxis.valueMin = 0
         bar.valueAxis.valueMax = 9
-        self.setAttributes(bar.valueAxis.labels,ValidLabel(vaxis.get('labels',{})))
+        if 'labels' in vaxis:
+            self.setAttributes(bar.valueAxis.labels,ValidLabel(vaxis['labels']))
 
         caxis = ValidCategoryAxis(self.get('categoryAxis',{}))
         self.setAttributes(bar.categoryAxis,caxis)
         bar.categoryAxis.categoryNames = ['May','Jun','Jul','Aug','Sep']
-        self.setAttributes(bar.categoryAxis.labels,ValidLabel(vaxis.get('labels',{})))
+        if 'labels' in caxis:
+            self.setAttributes(bar.categoryAxis.labels,ValidLabel(caxis['labels']))
 
         #bar.categoryAxis.style = 'stacked'
 
